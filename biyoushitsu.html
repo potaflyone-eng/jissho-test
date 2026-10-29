@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>美容室向け見本｜実証テストのご案内</title>
+<meta name="description" content="美容室向け実証テストのメニューと見本。来店後LINE・口コミ返信のデモを触れます。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="name" href="index.html">中島侑也</a>
+    <nav><a href="#contact">お申し込み</a></nav>
+  </div>
+</header>
+
+<div class="wrap hero">
+  <span class="eyebrow">美容室向け｜実証テスト参加店募集中</span>
+  <h1>2回目の来店、口コミ返信、SNS。<br>文章の手間を、こちらで引き受けます</h1>
+  <p>下の7つから1つを選んでいただくと、無料で制作してお渡しします。<br>このページはすべて見本です（「ヘアサロン みほん」は架空の店舗です）。</p>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="card">
+      <h2 style="font-size:18px">無料で制作する理由</h2>
+      <p style="margin:0">いまは、美容室で本当に役に立つかを確かめる<b>実証テスト</b>の段階です。<br>
+      費用はいただかない代わりに、使ってみた<b>感想</b>（よかった点・使いにくかった点）をお聞かせください。</p>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <h2>選べるメニュー（どれか1つ）</h2>
+    <div class="card">
+      <ol class="menu-list">
+        <li><b>来店後のLINE 3通セット</b><span>2回目の来店につなげる、お礼・様子伺い・次回のご案内</span><a href="#s1">見本を触ってみる</a></li>
+        <li><b>口コミ返信の下書きページ</b><span>口コミを貼ると、お店の口調で返信案が出ます</span><a href="#s2">見本を触ってみる</a></li>
+        <li><b>Instagram投稿文 1か月分</b><span>12本の投稿文と、いつ何を出すかのカレンダー</span><a href="#s3">見本を見る</a></li>
+        <li><b>次回予約カード・レジ横POP</b><span>すぐ印刷できるデータでお渡しします</span><a href="#s4">見本を見る</a></li>
+        <li><b>お久しぶりLINE 2パターン</b><span>しばらく来ていないお客様へ、押しつけない文面</span><a href="#s5">見本を見る</a></li>
+        <li><b>スタイル紹介のショート動画 1本</b><span>写真を送るだけで、テロップ付きの縦型動画に</span><a href="#s6">見本を見る</a></li>
+        <li><b>来店前のLINE事前アンケート</b><span>初回のカウンセリングの前に、お客様の希望が分かります</span><a href="#s7">見本を見る</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 1. 来店後LINE -->
+<section id="s1">
+  <div class="wrap">
+    <h2><span class="num">1</span>来店後のLINE 3通セット</h2>
+    <p class="lead">メニューと担当者を選ぶと、3通の文面ができます。実際に試してみてください。</p>
+    <div class="card">
+      <span class="sample-badge">デモ</span>
+      <form class="form" id="lineForm">
+        <div class="row">
+          <label>お店の名前<input id="lf-shop" value="ヘアサロン みほん"></label>
+          <label>担当者<input id="lf-staff" value="スタイリスト A"></label>
+        </div>
+        <div class="row">
+          <label>今回のメニュー
+            <select id="lf-menu">
+              <option value="cut">カット</option>
+              <option value="color">カラー</option>
+              <option value="perm">パーマ</option>
+              <option value="straight">縮毛矯正</option>
+              <option value="treatment">トリートメント</option>
+            </select>
+          </label>
+          <label>口調
+            <select id="lf-tone">
+              <option value="polite">丁寧</option>
+              <option value="friendly">親しみやすく</option>
+            </select>
+          </label>
+        </div>
+        <button class="primary" type="submit">文面を作る</button>
+      </form>
+      <div class="output" id="lineOut"></div>
+      <p class="note">デモ版は、用意した文の型を組み合わせて作っています（入力した内容はどこにも送られません）。実際の制作では、お店の普段の口調やメニューに合わせて1通ずつ作ります。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2. 口コミ返信 -->
+<section id="s2">
+  <div class="wrap">
+    <h2><span class="num">2</span>口コミ返信の下書きページ</h2>
+    <p class="lead">口コミを貼って星の数を選ぶと、返信の下書きが3案出ます。</p>
+    <div class="card">
+      <span class="sample-badge">デモ</span>
+      <form class="form" id="reviewForm">
+        <label>お店の名前<input id="rf-shop" value="ヘアサロン みほん"></label>
+        <label>口コミの文章
+          <textarea id="rf-text">初めて伺いました。カラーの色味の相談にしっかり乗っていただき、イメージどおりの仕上がりになりました。少し待ち時間があったのが残念でしたが、また行きたいです。</textarea>
+        </label>
+        <label>星の数
+          <select id="rf-star">
+            <option>5</option><option selected>4</option><option>3</option><option>2</option><option>1</option>
+          </select>
+        </label>
+        <button class="primary" type="submit">返信の下書きを作る</button>
+      </form>
+      <div class="output" id="reviewOut"></div>
+      <p class="note">デモ版は、口コミに含まれる言葉（カラー、接客、待ち時間など）を拾って、型を組み合わせています。実際の制作では、お店の過去の返信を読み込んで、お店専用の下書きページを作ります。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Instagram -->
+<section id="s3">
+  <div class="wrap">
+    <h2><span class="num">3</span>Instagram投稿文 1か月分</h2>
+    <p class="lead">「いつ・どの写真で・何を書くか」まで決めてお渡しします。下は12本のうちの3本と、カレンダーの見本です。</p>
+
+    <div class="card">
+      <span class="sample-badge">見本（架空の店舗です）</span>
+      <div class="output" style="margin-top:4px">
+        <div class="out-item">
+          <header>第1週・月曜｜写真：カラー後の後ろ姿<button class="copy" type="button">コピー</button></header>
+<pre>秋に向けて、少し深めのブラウンへ。
+
+明るさは控えめでも、光が当たるとやわらかく透ける色にしました。
+「暗くしたいけど重く見えるのは嫌」という方におすすめです。
+
+ご予約・ご相談はプロフィールのリンクから。
+
+#ヘアサロンみほん #秋カラー #ブラウンカラー #透明感カラー</pre>
+        </div>
+        <div class="out-item">
+          <header>第1週・水曜｜写真：スタイリング剤を手に取ったところ<button class="copy" type="button">コピー</button></header>
+<pre>朝のスタイリング、何分かかっていますか？
+
+毛先にだけオイルを少しなじませると、それだけでまとまりが出ます。
+つけすぎたときは、手に残った分を前髪にはつけないのがコツです。
+
+来店時に、お手持ちのスタイリング剤の使い方もお気軽にお聞きください。
+
+#ヘアサロンみほん #スタイリング #ヘアオイル #朝の時短</pre>
+        </div>
+        <div class="out-item">
+          <header>第1週・金曜｜写真：店内の様子<button class="copy" type="button">コピー</button></header>
+<pre>今週もありがとうございました。
+
+ヘアサロン みほんは、席数の少ない小さなお店です。
+周りを気にせず、ゆっくりご相談いただけます。
+
+来週の空き状況はストーリーズでお知らせします。
+
+#ヘアサロンみほん #美容室 #プライベートサロン</pre>
+        </div>
+      </div>
+
+      <h3 style="font-size:16px;margin:20px 0 8px">投稿カレンダー（見本）</h3>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th></th><th>月</th><th>水</th><th>金</th></tr></thead>
+          <tbody>
+            <tr><th>第1週</th><td>季節のカラー</td><td>お手入れのコツ</td><td>お店の様子</td></tr>
+            <tr><th>第2週</th><td>ビフォーアフター</td><td>よくある質問</td><td>スタッフ紹介</td></tr>
+            <tr><th>第3週</th><td>おすすめメニュー</td><td>髪の悩み別の提案</td><td>お客様の声（許可済み）</td></tr>
+            <tr><th>第4週</th><td>季節のスタイル</td><td>ホームケア商品の使い方</td><td>来月の空き状況</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. カード・POP -->
+<section id="s4">
+  <div class="wrap">
+    <h2><span class="num">4</span>次回予約カード・レジ横POP</h2>
+    <p class="lead">お会計のときに渡すカードと、レジ横に置くPOPです。お店の色に合わせて、印刷用データでお渡しします。</p>
+    <div class="card">
+      <span class="sample-badge">見本（架空の店舗です）</span>
+      <div class="print-row">
+        <div>
+          <div class="biz-card">
+            <div class="t">NEXT RESERVATION</div>
+            <div class="big">次回のおすすめ時期</div>
+            <div class="lines">
+              <span>メニュー：</span>
+              <span>おすすめ時期：　　月　　日ごろ</span>
+              <span>担当：</span>
+            </div>
+            <div style="font-size:11px;text-align:right">ヘアサロン みほん</div>
+          </div>
+          <p class="note">名刺サイズ（91×55mm）</p>
+        </div>
+        <div>
+          <div class="pop">
+            <div class="ribbon">お会計のときに、お気軽にどうぞ</div>
+            <div class="big">次回のご予約、<br>今日決めておきませんか？</div>
+            <p>髪の状態がいちばん良いうちに、<br>次の時期をご提案します。</p>
+            <p>ご都合が変わったら、<br>LINEでかんたんに変更できます。</p>
+            <div class="foot">ヘアサロン みほん</div>
+          </div>
+          <p class="note">A5サイズ（148×210mm）</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. お久しぶりLINE -->
+<section id="s5">
+  <div class="wrap">
+    <h2><span class="num">5</span>お久しぶりLINE 2パターン</h2>
+    <p class="lead">しばらく来ていないお客様に送る文面です。売り込みに見えない言い方にしています。</p>
+    <div class="card">
+      <span class="sample-badge">見本（架空の店舗です）</span>
+      <div class="print-row">
+        <div>
+          <p style="margin:0 0 6px;font-weight:700;font-size:14px">A：季節のあいさつ型</p>
+          <div class="chat">
+            <div class="from">ヘアサロン みほん</div>
+            <div class="bubble">〇〇様、お久しぶりです。
+ヘアサロン みほんのAです。
+
+朝晩が涼しくなってきましたね。
+夏の紫外線で、毛先のパサつきが気になる時期です。
+
+もし気になることがあれば、このLINEでいつでもご相談ください。
+またお会いできるのを楽しみにしています。</div>
+          </div>
+        </div>
+        <div>
+          <p style="margin:0 0 6px;font-weight:700;font-size:14px">B：新メニューのお知らせ型</p>
+          <div class="chat">
+            <div class="from">ヘアサロン みほん</div>
+            <div class="bubble">〇〇様、ご無沙汰しております。
+ヘアサロン みほんです。
+
+この秋から、髪の内側を補修するトリートメントを始めました。
+カットと一緒でも、15分ほどで終わります。
+
+ご興味があれば、ご予約のときに「トリートメントも」とお伝えください。</div>
+          </div>
+        </div>
+      </div>
+      <p class="note">送る相手の決め方（例：前回の来店から3か月以上）も一緒にお渡しします。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6. 動画 -->
+<section id="s6">
+  <div class="wrap">
+    <h2><span class="num">6</span>スタイル紹介のショート動画</h2>
+    <p class="lead">スタイル写真5〜10枚から、テロップ付きの縦型動画（15〜30秒）を作ります。Instagramのリールやショート動画に使えます。</p>
+    <div class="card">
+      <div class="video-slot">見本動画を準備中です<br>（YouTube限定公開でここに載せます）</div>
+      <p class="note">お客様が写っている写真は、掲載の許可をいただいたものだけを使います。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7. 事前アンケート -->
+<section id="s7">
+  <div class="wrap">
+    <h2><span class="num">7</span>来店前のLINE事前アンケート</h2>
+    <p class="lead">ご予約のあとにLINEで送る質問です。来店前にお客様の希望が分かります。</p>
+    <div class="card">
+      <span class="sample-badge">見本（架空の店舗です）</span>
+      <div class="chat">
+        <div class="from">ヘアサロン みほん</div>
+        <div class="bubble">ご予約ありがとうございます。
+当日のご相談をスムーズにするため、よろしければ3つだけ教えてください（1分ほどで終わります）。
+
+① 今回いちばん変えたいところは？
+　長さ／色／まとまり／ボリューム／おまかせ
+
+② 髪で気になっていることは？
+　うねり・広がり／パサつき／ボリュームが出ない／特にない
+
+③ ふだんのスタイリングは？
+　ほとんどしない／ドライヤーだけ／アイロンやコテを使う
+
+なりたい雰囲気の写真があれば、このトークに送っていただいても大丈夫です。</div>
+      </div>
+      <p class="note">あわせて、回答をカウンセリングで使うためのメモの型もお渡しします。</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="wrap">
+    <h2>お申し込みは公式LINEから</h2>
+    <ol class="steps">
+      <li>下のボタンから公式LINEを友だち追加</li>
+      <li><b>お店の名前</b>と、<b>気になるメニューの番号</b>（1〜7）を送信</li>
+      <li>こちらから、制作に必要なものをご連絡します</li>
+    </ol>
+    <a class="btn-line" href="https://lin.ee/y8I2jqT" target="_blank" rel="noopener">公式LINEで番号を送る</a>
+    <p class="note">無料の代わりに、使ってみた感想をお聞かせください。</p>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <p>このページに出てくる店名（ヘアサロン みほん）・人名・口コミはすべて架空の見本です。</p>
+    <p><a href="index.html">トップへ</a>　© 中島侑也</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast">コピーしました</div>
+<script src="common.js"></script>
+<script src="biyoushitsu.js"></script>
+</body>
+</html>
