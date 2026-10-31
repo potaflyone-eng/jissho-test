@@ -68,7 +68,7 @@ function buildCase() {
   ]);
 }
 
-document.getElementById('caseForm').addEventListener('submit', (e) => {
+document.getElementById('caseForm')?.addEventListener('submit', (e) => {
   e.preventDefault();
   buildCase();
 });
@@ -176,6 +176,6 @@ document.getElementById('repForm').addEventListener('submit', (e) => {
 });
 
 // 最初から結果を見せておく
-document.getElementById('caseForm').requestSubmit();
+document.getElementById('caseForm')?.requestSubmit();
 document.getElementById('inqForm').requestSubmit();
 document.getElementById('repForm').requestSubmit();
