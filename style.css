@@ -266,3 +266,64 @@ body.theme-koumuten { --accent: #8a5a2b; --accent-soft: #f5ebe0; }
 
 .profile dt { font-weight: 700; margin-top: 8px; }
 .profile dd { margin: 0; }
+
+/* やるメリット／やらないデメリット */
+.merit { display: grid; gap: 10px; margin: 14px 0 0; }
+@media (min-width: 620px) { .merit { grid-template-columns: 1fr 1fr; } }
+.merit > div { border-radius: 12px; padding: 12px 14px; font-size: 14px; line-height: 1.7; }
+.merit .plus { background: #e7f5ec; color: #1e4d2f; }
+.merit .minus { background: #fbeee8; color: #6b3420; }
+.merit b { display: block; margin-bottom: 4px; }
+.merit ul { margin: 0; padding-left: 1.2em; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .merit .plus { background: #1f3326; color: #cfe9d6; }
+  :root:not([data-theme="light"]) .merit .minus { background: #3a2620; color: #f1d3c6; }
+}
+
+/* 公式LINEの意義・計算 */
+.facts { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+@media (min-width: 620px) { .facts { grid-template-columns: repeat(3, 1fr); } }
+.facts li { background: var(--accent-soft); border-radius: 12px; padding: 12px 14px; font-size: 14px; line-height: 1.6; }
+.facts li strong { display: block; font-size: 22px; color: var(--accent); line-height: 1.3; }
+.facts li small { display: block; color: var(--muted); font-size: 12px; margin-top: 4px; }
+.calc-result { margin-top: 14px; padding: 14px; border-radius: 12px; background: var(--accent-soft); font-size: 15px; }
+.calc-result strong { font-size: 24px; color: var(--accent); }
+.photo-slot {
+  aspect-ratio: 4 / 3; max-width: 260px; border-radius: 10px; background: #d9dee5; color: #556;
+  display: grid; place-items: center; font-size: 13px; text-align: center; padding: 10px;
+}
+
+/* YNワークスのホームページ */
+body.theme-yn { --accent: #2f5d50; --accent-soft: #e4efeb; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) body.theme-yn { --accent: #8cc7b5; --accent-soft: #22322d; }
+}
+.brand { display: flex; flex-direction: column; line-height: 1.2; text-decoration: none; color: var(--ink); }
+.brand b { font-size: 17px; }
+.brand small { font-size: 11px; color: var(--muted); }
+.hero-btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.btn {
+  display: inline-block; text-decoration: none; font-weight: 700; border-radius: 10px; padding: 12px 18px;
+  background: var(--accent); color: #fff;
+}
+.btn.ghost { background: transparent; color: var(--accent); border: 1.5px solid var(--accent); }
+.hero .creds { margin-top: 14px; font-size: 14px; color: var(--muted); }
+.gallery { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
+@media (min-width: 700px) { .gallery { grid-template-columns: repeat(3, 1fr); } }
+.gallery a {
+  display: block; text-decoration: none; color: var(--ink); background: var(--surface);
+  border: 1px solid var(--line); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow);
+}
+.gallery img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: left top; background: #fff; border-bottom: 1px solid var(--line); }
+.gallery span { display: block; padding: 8px 10px 10px; font-size: 13px; font-weight: 700; line-height: 1.5; }
+.gallery small { display: block; font-weight: 400; color: var(--muted); font-size: 12px; }
+.gal-head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin: 22px 0 10px; }
+.gal-head h3 { margin: 0; font-size: 17px; }
+.gal-head a { font-size: 14px; }
+.timeline { list-style: none; margin: 0; padding: 0; border-left: 3px solid var(--accent-soft); }
+.timeline li { position: relative; padding: 0 0 14px 18px; }
+.timeline li::before { content: ""; position: absolute; left: -8px; top: 8px; width: 13px; height: 13px; border-radius: 50%; background: var(--accent); }
+.timeline b { display: block; }
+.timeline span { color: var(--muted); font-size: 14px; }
+.faq dt { font-weight: 700; margin-top: 12px; }
+.faq dd { margin: 2px 0 0; color: var(--muted); font-size: 15px; }

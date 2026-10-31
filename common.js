@@ -51,3 +51,20 @@ function renderOutputs(container, items) {
     container.appendChild(box);
   }
 }
+
+// 公式LINEがないことでの取りこぼしの計算（数字は見る人が入れる）
+function setupLossCalc() {
+  const f = document.getElementById('lossForm');
+  if (!f) return;
+  const num = (id) => Math.max(0, Number(document.getElementById(id).value) || 0);
+  const run = () => {
+    const lost = num('lc-count') * (num('lc-rate') / 100) * num('lc-profit') * 12;
+    document.getElementById('lossOut').innerHTML =
+      '年間で取りこぼしているかもしれない粗利：<strong>' + Math.round(lost).toLocaleString('ja-JP') + '円</strong>' +
+      '<br><span class="note">このうち1割でもLINEで取り戻せれば、' + Math.round(lost / 10).toLocaleString('ja-JP') + '円です。</span>';
+  };
+  f.addEventListener('input', run);
+  f.addEventListener('submit', (e) => { e.preventDefault(); run(); });
+  run();
+}
+setupLossCalc();

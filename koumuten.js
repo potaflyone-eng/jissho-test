@@ -138,6 +138,44 @@ document.getElementById('inqForm').addEventListener('submit', (e) => {
   }));
 });
 
+// ---------- 写真＋ひとことの工事報告 ----------
+
+const REPORT_STAGE = {
+  demolish: { done: '解体が終わりました', photo: '解体後の様子です', next: '下地の補修と配管の工事' },
+  base: { done: '下地の補修と配管の工事が終わりました', photo: '新しい配管と下地の様子です', next: '設備の取り付け' },
+  install: { done: '設備の取り付けが終わりました', photo: '取り付けた設備の様子です', next: '内装の仕上げ' },
+  finish: { done: '内装の仕上げが終わりました', photo: '仕上がりの様子です', next: '最終の確認とお掃除' },
+};
+
+function buildReport({ company, kind, stage, voice, tone }) {
+  const s = REPORT_STAGE[stage];
+  const soft = tone === 'soft';
+  const memo = voice ? `\n${voice.replace(/[。]?$/, '。')}` : '';
+  const text = [
+    '〇〇様',
+    soft ? `${company}です。今日の${kind}の様子をお知らせします！` : `${company}でございます。本日の${kind}の進み具合をご報告いたします。`,
+    '',
+    `本日、${s.done}。`,
+    `写真は、${s.photo}。${memo}`,
+    '',
+    `明日からは、${s.next}に入ります。`,
+    soft ? '気になることがあれば、いつでもこのLINEでどうぞ。' : 'ご不明な点がございましたら、このLINEでお気軽にお尋ねください。',
+  ].join('\n');
+  return [{ title: 'お施主様へのLINE報告（AIが作る下書き）', text }];
+}
+
+document.getElementById('repForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  renderOutputs(document.getElementById('repOut'), buildReport({
+    company: val('rp-company') || 'みほん工務店',
+    kind: val('rp-kind') || '工事',
+    stage: val('rp-stage'),
+    voice: val('rp-voice'),
+    tone: val('rp-tone'),
+  }));
+});
+
 // 最初から結果を見せておく
 document.getElementById('caseForm').requestSubmit();
 document.getElementById('inqForm').requestSubmit();
+document.getElementById('repForm').requestSubmit();
