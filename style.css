@@ -407,3 +407,38 @@ body.lp { --bg: #f4f7fc; --accent: #1b2f6e; --accent-soft: #e6ecf8; --red: #d714
   .lp header.site .brand small { display: none; }
   .lp header.site nav { gap: 10px; flex-wrap: nowrap; }
 }
+
+/* 新しいプログラムのイメージ図（HTMLで描いた見本） */
+.mock { aspect-ratio: 4 / 3; border-radius: 8px; border: 1px solid #d8dde5; background: #fff; overflow: hidden; color: #333; font-size: 11px; line-height: 1.4; }
+.mock-video { display: grid; grid-template-columns: 44% 1fr; gap: 10px; padding: 10px; background: #12172b; color: #fff; }
+.mock-video .phone { position: relative; border-radius: 10px; overflow: hidden; background: #222; border: 2px solid #3a4160; }
+.mock-video .ph { position: absolute; left: 0; right: 0; }
+.mock-video .p1 { top: 0; height: 52%; background: linear-gradient(135deg, #c9b79c, #8d7a62); }
+.mock-video .p2 { bottom: 0; height: 48%; background: linear-gradient(135deg, #dfe8ef, #9fb4c6); }
+.mock-video .telop, .mock-video .telop2 { position: absolute; left: 6px; right: 6px; text-align: center; font-weight: 900; font-size: 12px; color: #fff; text-shadow: 0 1px 3px #000, 0 0 2px #000; }
+.mock-video .telop { top: 40%; }
+.mock-video .telop2 { top: 52%; color: var(--yellow, #ffe14d); }
+.mock-video .side { display: flex; flex-direction: column; gap: 6px; justify-content: center; }
+.mock-video .side b { font-size: 13px; color: #ffe14d; }
+.mock-video .side span { background: #23305c; border-radius: 6px; padding: 4px 6px; }
+.mock-video .side span::before { content: "✓ "; color: #7fe3a0; }
+.mock-video .side em { font-style: normal; color: #aab; font-size: 10px; }
+.mock-web .bar { display: flex; align-items: center; gap: 4px; background: #eef1f6; padding: 6px 8px; border-bottom: 1px solid #d8dde5; }
+.mock-web .bar i { width: 7px; height: 7px; border-radius: 50%; background: #c5ccd8; }
+.mock-web .bar span { margin-left: 6px; background: #fff; border-radius: 99px; padding: 1px 8px; color: #667; font-size: 10px; }
+.mock-web .pg { padding: 10px 12px; }
+.mock-web .pg b { display: block; font-size: 13px; color: #1b2f6e; margin-bottom: 6px; }
+.mock-web .img { height: 72px; border-radius: 6px; background: linear-gradient(135deg, #dfe8ef, #b8c9d8); margin-bottom: 8px; }
+.mock p { height: 7px; background: #e3e7ee; border-radius: 4px; margin: 0 0 6px; }
+.mock p.s { width: 60%; }
+.mock-doc { padding: 10px 12px; background: #fdfdfb; }
+.mock-doc b { display: block; font-size: 14px; color: #1b2f6e; border-bottom: 2px solid #1b2f6e; padding-bottom: 3px; }
+.mock-doc small { display: block; color: #667; margin: 3px 0 8px; }
+.mock-doc .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.mock-doc .grid i { display: block; height: 46px; border-radius: 4px; background: linear-gradient(135deg, #d9d2c5, #a9a08f); }
+.mock-doc .grid span { display: block; height: 6px; background: #e3e7ee; border-radius: 3px; margin-top: 4px; }
+.mock-doc .chart { display: flex; align-items: flex-end; gap: 8px; height: 70px; border-bottom: 1px solid #ccd; margin-bottom: 8px; padding: 0 6px; }
+.mock-doc .chart i { flex: 1; background: #8fa6d6; border-radius: 3px 3px 0 0; }
+.mock-doc .rows { list-style: none; margin: 0; padding: 0; }
+.mock-doc .rows li { display: flex; justify-content: space-between; gap: 6px; border-bottom: 1px dashed #d8dde5; padding: 6px 0; font-weight: 700; }
+.mock-doc .rows em { font-style: normal; color: #1e8a4c; font-weight: 400; font-size: 10px; }
