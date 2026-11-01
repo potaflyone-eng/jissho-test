@@ -442,3 +442,16 @@ body.lp { --bg: #f4f7fc; --accent: #1b2f6e; --accent-soft: #e6ecf8; --red: #d714
 .mock-doc .rows { list-style: none; margin: 0; padding: 0; }
 .mock-doc .rows li { display: flex; justify-content: space-between; gap: 6px; border-bottom: 1px dashed #d8dde5; padding: 6px 0; font-weight: 700; }
 .mock-doc .rows em { font-style: normal; color: #1e8a4c; font-weight: 400; font-size: 10px; }
+
+/* LINE画面のモック（すぐ返っているセット） */
+.mock-line { display: flex; flex-direction: column; background: #8cabd8; }
+.mock-line .top { background: #2b3a55; color: #fff; padding: 6px 10px; font-weight: 700; font-size: 11px; }
+.mock-line .msgs { flex: 1; padding: 8px; display: flex; flex-direction: column; gap: 6px; overflow: hidden; }
+.mock-line .msgs p { height: auto; margin: 0; max-width: 82%; padding: 6px 8px; border-radius: 10px; background: #fff; font-size: 10.5px; line-height: 1.45; color: #222; }
+.mock-line .msgs p.in { align-self: flex-start; }
+.mock-line .msgs p.out { align-self: flex-end; background: #a6e39a; }
+.mock-line .msgs small { align-self: center; font-size: 9px; color: #fff; background: rgba(0,0,0,.28); border-radius: 99px; padding: 1px 8px; }
+.mock-line .rich { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: #c9d3e3; }
+.mock-line .rich span { background: #fff; text-align: center; padding: 10px 2px; font-weight: 700; color: #1b2f6e; font-size: 10.5px; }
+.mock-doc .rows li { font-size: 10.5px; }
+.prog figure a { text-decoration: none; color: inherit; }
